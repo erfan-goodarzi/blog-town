@@ -1,0 +1,32 @@
+nav {
+  background-color: white !important;
+  box-shadow: 0px 2px 12px 7px #dadada;
+}
+
+
+
+.nav-item {
+
+  padding: 6px 20px;
+}
+
+.nav-item a {
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+.dashboard {
+    background: #121BFA !important;
+    border: 2px solid #121BFA;
+    border-radius: 38px;
+    padding: 7px 31px !important;
+    color : #fff !important;
+    margin-left: 47rem;
+}
+.dashboard:focus, .dashboard:hover {
+    color: #121BFA !important;
+    background: transparent !important;
+    border: 2px solid #121BFA;
+}
