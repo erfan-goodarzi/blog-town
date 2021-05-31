@@ -8,7 +8,7 @@ export default class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      loginErrors: ""
+      loginErrors: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,7 +17,7 @@ export default class Login extends Component {
 
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   }
 
@@ -30,17 +30,17 @@ export default class Login extends Component {
         {
           user: {
             email: email,
-            password: password
-          }
+            password: password,
+          },
         },
         { withCredentials: true }
       )
-      .then(response => {
+      .then((response) => {
         if (response.data.logged_in) {
           this.props.handleSuccessfulAuth(response.data);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("login error", error);
       });
     event.preventDefault();
@@ -49,7 +49,56 @@ export default class Login extends Component {
   render() {
     return (
       <div>
+        <div className="container">
+          
+     
         <form onSubmit={this.handleSubmit}>
+          <div className="mb-3">
+            <label for="exampleInputEmail1" className="form-label">
+              Email address
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="exampleInputEmail1"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
+            <div id="emailHelp" className="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div className="mb-3">
+            <label for="exampleInputPassword1" className="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              id="exampleInputPassword1"
+              value={this.state.password}
+            onChange={this.handleChange}
+            required
+            />
+          </div>
+          <div className="mb-3 form-check">
+            <input
+              type="checkbox"
+              className="form-check-input"
+              id="exampleCheck1"
+            />
+            <label className="form-check-label" for="exampleCheck1">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </form>
+
+        </div>
+        {/* <form onSubmit={this.handleSubmit}>
           <input
             type="email"
             name="email"
@@ -69,7 +118,7 @@ export default class Login extends Component {
           />
 
           <button type="submit">Login</button>
-        </form>
+        </form> */}
       </div>
     );
   }
