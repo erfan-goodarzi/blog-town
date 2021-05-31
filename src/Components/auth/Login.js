@@ -51,23 +51,21 @@ export default class Login extends Component {
       <div>
         <div className="container">
           <div className="row mt-5">
-            <div className="col-lg-6 mx-auto">
+            <div className="col-lg-4 mx-auto">
             <form onSubmit={this.handleSubmit}>
               <div className="mb-3">
                 <label for="exampleInputEmail1" className="form-label">
                   Email address
                 </label>
                 <input
-                  type="email"
-                  className="form-control"
-                  id="exampleInputEmail1"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  required
+                   type="email"
+                   name="email"
+                   className="form-control"
+                   placeholder="Email"
+                   value={this.state.email}
+                   onChange={this.handleChange}
+                   required
                 />
-                <div id="emailHelp" className="form-text">
-                  We'll never share your email with anyone else.
-                </div>
               </div>
               <div className="mb-3">
                 <label for="exampleInputPassword1" className="form-label">
@@ -75,8 +73,9 @@ export default class Login extends Component {
                 </label>
                 <input
                   type="password"
+                  name="password"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  placeholder="Password"
                   value={this.state.password}
                   onChange={this.handleChange}
                   required
@@ -99,27 +98,7 @@ export default class Login extends Component {
             </div>
           </div>
         </div>
-        {/* <form onSubmit={this.handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
-          />
-
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.handleChange}
-            required
-          />
-
-          <button type="submit">Login</button>
-        </form> */}
+      
       </div>
     );
   }

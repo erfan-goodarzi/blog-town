@@ -9,7 +9,7 @@ export default class Registration extends Component {
       email: "",
       password: "",
       password_confirmation: "",
-      registrationErrors: ""
+      registrationErrors: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,7 +18,7 @@ export default class Registration extends Component {
 
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   }
 
@@ -32,17 +32,17 @@ export default class Registration extends Component {
           user: {
             email: email,
             password: password,
-            password_confirmation: password_confirmation
-          }
+            password_confirmation: password_confirmation,
+          },
         },
         { withCredentials: true }
       )
-      .then(response => {
+      .then((response) => {
         if (response.data.status === "created") {
           this.props.handleSuccessfulAuth(response.data);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("registration error", error);
       });
     event.preventDefault();
@@ -51,36 +51,59 @@ export default class Registration extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
-          />
-
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.handleChange}
-            required
-          />
-
-          <input
-            type="password"
-            name="password_confirmation"
-            placeholder="Password confirmation"
-            value={this.state.password_confirmation}
-            onChange={this.handleChange}
-            required
-          />
-
-          <button type="submit">Register</button>
-        </form>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 mx-auto mt-5">
+              <form onSubmit={this.handleSubmit}>
+                <div className="mb-3">
+                  <label for="exampleInputEmail1" className="form-label">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    className="form-control"
+                    placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label for="exampleInputEmail1" className="form-label">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    className="form-control"
+                    placeholder="Password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label for="exampleInputEmail1" className="form-label">
+                    Password confirmation
+                  </label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    name="password_confirmation"
+                    placeholder="Password confirmation"
+                    value={this.state.password_confirmation}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </div>
+                <button className="btn btn-info mt-4" type="submit">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
