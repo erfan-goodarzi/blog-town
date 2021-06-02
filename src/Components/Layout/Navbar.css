@@ -6,6 +6,9 @@ nav {
 .navbar-brand {
   position: relative;
   left: 23rem;
+  color: #C3A26B !important;
+  font-weight: bold;
+  font-family: cursive;
 }
 
 .nav-item {

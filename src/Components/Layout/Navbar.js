@@ -69,6 +69,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
     </Auxiliary>
   );
 };
