@@ -15,7 +15,7 @@ const TopPost = () => {
                     <div className="col-lg-6 col-sm-6">
                             <div className="info-post mt-2">
                                 <span className="badge bg-info category-name">Category</span>
-                                <h3><a href="/">The Witcher season 2: release date, cast, set photos, trailer and what we know</a></h3>
+                                <h3><a href="/">The Witcher season 2: release date, cast, set photos, trailer</a></h3>
                             </div>
                     </div>
                 </div>

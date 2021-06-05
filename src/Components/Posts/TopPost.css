@@ -1,6 +1,9 @@
 .img-responsive{
-    border-radius: 30px;
-    width: 85%;
+    border-radius: 22px;
+    width: 96%;
+    margin-left: 5rem;
+}
+.info-post{
     margin-left: 5rem;
 }
 
@@ -8,7 +11,7 @@
     font-size: 34px;
     text-align: left;
     font-weight: bold;
-    width: 76%;
+    width: 68%;
     color: #031838;
 }
 
@@ -18,10 +21,13 @@
 }
 
 .category-name{
-    padding: 14px 15px;
+    padding: 11px 23px;
     border-radius: 8px;
     background: #e2ddff !important;
     color: #a494ff;
-    font-size: 13px;
+    font-size: 14px;
     margin-right: 35rem;
+    align-items: center;
+    margin-bottom: 14px;
+
 }
