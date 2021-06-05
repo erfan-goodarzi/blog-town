@@ -4,7 +4,7 @@ import PostImg from '../../assets/image/witcher.jpg';
 
 const TopPost = () => {
     return (
-        <div className="mt-5">
+        <div className="mt-5 mb-5">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-sm-6">

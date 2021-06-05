@@ -8,15 +8,18 @@ nav {
   left: 23rem;
   color: #C3A26B !important;
   font-weight: bold;
-  font-family: cursive;
-}
 
+}
+.navbar-nav{
+  width: 107%;
+
+}
 .nav-item {
   padding: 13px 22px;
 }
 .nav-item a {
-  font-family: "Hind Madurai", sans-serif;
-  font-weight: 500;
+
+font-weight: 500;
   color: #000;
   text-decoration: none;
 }
