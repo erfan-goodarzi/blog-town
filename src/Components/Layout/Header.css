@@ -1,0 +1,22 @@
+.header-background{
+    background: linear-gradient(rgb(80 80 80 / 10%), rgb(4 4 4 / 85%)), url('../../assets/image/Background.jpg');
+    height: 82vh;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover
+}
+
+.head-title {
+    font-weight: 700;
+    font-size: 54px;
+    color: #ddd;
+    padding-top: 8rem;
+}
+.head-des {
+    font-weight: 200;
+    font-size: 24px;
+    color: rgb(228, 228, 228);
+   
+}
+

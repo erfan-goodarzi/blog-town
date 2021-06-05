@@ -1,0 +1,27 @@
+.img-responsive{
+    border-radius: 30px;
+    width: 85%;
+    margin-left: 5rem;
+}
+
+.info-post h3{
+    font-size: 34px;
+    text-align: left;
+    font-weight: bold;
+    width: 76%;
+    color: #031838;
+}
+
+.info-post h3 a{
+    color: #04224e;
+    text-decoration: none;
+}
+
+.category-name{
+    padding: 14px 15px;
+    border-radius: 8px;
+    background: #e2ddff !important;
+    color: #a494ff;
+    font-size: 13px;
+    margin-right: 35rem;
+}
