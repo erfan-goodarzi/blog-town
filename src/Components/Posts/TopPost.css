@@ -1,5 +1,5 @@
 .img-responsive{
-    border-radius: 22px;
+    border-radius: 14px;
     width: 96%;
     margin-left: 5rem;
 }
@@ -8,12 +8,12 @@
 }
 
 .info-post h3{
-    font-size: 37px;
+    font-size: 33px;
     text-align: left;
     font-weight: bold;
-    width: 68%;
+    width: 69%;
     line-height: 1.2;
-    color: #031838;
+   
 }
 
 .info-post h3 a{
@@ -27,9 +27,7 @@
     background: #e2ddff !important;
     color:  #a189d8;
     font-size: 14px;
-    font-weight: bold;
-    margin-right: 35rem;
-    align-items: center;
+    font-weight: bold;    align-items: center;
     margin-bottom: 14px;
 
 }

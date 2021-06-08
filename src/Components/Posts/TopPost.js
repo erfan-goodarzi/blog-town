@@ -5,7 +5,7 @@ import ProfileImg from '../../assets/image/profile.png';
 
 const TopPost = () => {
   return (
-    <div className="mt-5 mb-5">
+    <section className="top-post mt-5 mb-5">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-sm-6">
@@ -53,7 +53,7 @@ const TopPost = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
