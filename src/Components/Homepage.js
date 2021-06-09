@@ -15,8 +15,15 @@ const Homepage = () => {
         <div className="row">
         
            <Post img={PostImg}/>
-           <Post img={PostImg2}/>
            <Post img={PostImg3}/>
+           <Post img={PostImg2}/>
+           <Post img={PostImg}/>
+           <Post img={PostImg2}/>
+           <Post img={PostImg}/>
+           <Post img={PostImg3}/>
+
+           <Post img={PostImg3}/>
+           <Post img={PostImg2}/>
         </div>
       </div>
     </div>
