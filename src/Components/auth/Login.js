@@ -16,13 +16,13 @@ export default class Login extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange(e) {
     this.setState({
-      [event.target.name]: event.target.value,
+      [e.target.name]: e.target.value,
     });
   }
 
-  handleSubmit(event) {
+  handleSubmit(e) {
     const { email, password } = this.state;
 
     axios
@@ -44,7 +44,7 @@ export default class Login extends Component {
       .catch((error) => {
         console.log("login error", error);
       });
-    event.preventDefault();
+    e.preventDefault();
   }
 
   render() {
