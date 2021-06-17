@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import './Login.css'
 
+
 class Registration extends Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
 
     this.state = {
@@ -69,6 +70,8 @@ class Registration extends Component {
                   <input
                     type="fullname"
                     name="fullname"
+
+
                     className="form-control border border-primary rounded-3"
                     placeholder="Full name"
                     value={this.state.fullname}
