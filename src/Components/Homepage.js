@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./Layout/Header";
  import Post from "./Posts/Post";
 import TopPost from "./Posts/TopPost";
-
+import img from '../assets/image/3d-illustration-astronaut-pose-against-isolated-black-background-with-clipping-path_46363-369.jpg'
 import axios from "axios";
 
 class Homepage extends Component {
@@ -22,7 +22,6 @@ componentDidMount(){
         const updatePosts = posts.map(item=>{
             return {
                 ...item,
-                author: 'Erfan'
             }
         })
         this.setState({posts: updatePosts})
@@ -38,9 +37,14 @@ postClick = (id) =>{
 
 render() {
     let posts = <h4 style={{textAlign: 'center',color: 'red' }}>Somethig went wrong...</h4>;
-    if(!this.state.error){
-     posts = this.state.posts.map(item => {
-         return <Post Clicked={() => this.postClick(item.id)} title={item.title} author={item.author}/>
+    if(!this.state.error ){
+         posts = this.state.posts.map(item => {
+           if(item.country !== 'ma' && item.country !==  'eg'){
+             return <Post Clicked={() => this.postClick(item.id)} category={item.category} img={img} des={item.description} title={item.title} author={item.author}/>
+           }else{
+             return null
+           }
+         
      })
     }
     return (
